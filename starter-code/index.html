@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | GitHub user search app</title>
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
 
-  devfinder
-
-  Light
-  Dark
-
-  Search GitHub username...
-  Search
-
-  Joined
-
-  Repos
-  Followers
-  Following
-
-</body>
+    <title>Frontend Mentor | GitHub user search app</title>
+  </head>
+  <body>
+    <main class="maxwidth-wrapper">
+      devfinder Light Dark Search GitHub username... Search Joined Repos
+      Followers Following
+      <form class="shadow">
+        <img src="./assets/icon-search.svg" alt="search-button" />
+        <label for="username">
+          <input type="text" placeholder="Search GitHub username..." />
+        </label>
+        <p class="no-results">No results</p>
+        <button>Search</button>
+      </form>
+      <article class="search-results shadow">Something</article>
+    </main>
+  </body>
 </html>
