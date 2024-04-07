@@ -112,7 +112,7 @@ body.dark {
   gap: 24px;
 }
 
-.shadow:not(.dark) {
+body:not(.dark) .shadow {
   box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
 }
 
@@ -132,6 +132,8 @@ nav .theme {
   display: flex;
   align-items: center;
   gap: 16px;
+  background-color: transparent;
+  border: none;
 }
 
 nav .theme .theme-name {
@@ -154,36 +156,32 @@ nav .theme:hover {
   cursor: pointer;
 }
 
-nav .theme:hover .theme-name {
-  color: var(--text-high-contrast);
+/* Light mode hover for theme name */
+nav .theme:hover .theme-name.sun {
+  color: #90a4d4;
 }
 
-/* This is for the sun icon svg */
-nav .theme:hover .icon svg g {
-  fill: var(--text-high-contrast);
-}
-
-/* Dark mode hover for sun icon */
-nav .theme:hover .icon.sun.dark svg path {
+/* Light mode hover for sun icon*/
+nav .theme:hover .icon.sun svg path {
   fill: #90a4d4;
 }
 
 /* Dark mode hover for theme name*/
-nav .theme:hover .theme-name.sun.dark {
-  color: #90a4d4;
+nav .theme:hover .theme-name.moon {
+  color: var(--text-high-contrast);
 }
 
-/* This is for the moon icon svg */
-nav .theme:hover .icon svg path {
+/* Dark mode hover for moon icon */
+nav .theme:hover .icon.moon svg path {
   fill: var(--text-high-contrast);
 }
 
-.moon {
+body:not(.dark) .sun {
   display: none;
 }
 
-.sun {
-  display: revert;
+body.dark .moon {
+  display: none;
 }
 
 form {
