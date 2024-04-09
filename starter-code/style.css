@@ -232,6 +232,10 @@ input[type="text"] {
   width: 100%;
 }
 
+body.dark input[type="text"] {
+  color: var(--text-high-contrast);
+}
+
 form:hover {
   cursor: pointer;
 }
