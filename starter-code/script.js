@@ -8,6 +8,7 @@ const searchResults = document.querySelector(".search-results");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
+  usernameInput.blur();
   const username = document.getElementById("username").value;
   getUser(username);
 });
