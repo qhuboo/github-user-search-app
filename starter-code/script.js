@@ -8,7 +8,6 @@ const searchResults = document.querySelector(".search-results");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  usernameInput.blur();
   const username = document.getElementById("username").value;
   getUser(username);
 });
@@ -27,6 +26,7 @@ async function getUser(username) {
     noResults.classList.add("show");
     return;
   } else {
+    usernameInput.blur();
     noResults.classList.remove("show");
   }
   const avatar = (document.getElementById("avatar_url").src = data.avatar_url);
