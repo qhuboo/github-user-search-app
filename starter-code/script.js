@@ -18,6 +18,11 @@ themeButton.addEventListener("click", () => {
   body.classList.toggle("dark");
 });
 
+const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+if (systemTheme) {
+  themeButton.click();
+}
+
 async function getUser(username) {
   const response = await fetch(`https://api.github.com/users/${username}`);
   const data = await response.json();
