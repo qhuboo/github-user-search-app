@@ -332,6 +332,10 @@ input[type="text"]:focus {
   color: var(--text-mid-contrast);
 }
 
+.icon {
+  flex-shrink: 0;
+}
+
 /* Added margin to align the location name with the other links since the icon name is the smallest icon */
 .location-icon {
   margin-right: 6px;
