@@ -513,6 +513,7 @@ input[type="text"]:focus {
   }
 
   form button:hover {
+    cursor: pointer;
     background-color: var(--primary-hover);
   }
 
