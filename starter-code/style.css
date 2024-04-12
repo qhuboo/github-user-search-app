@@ -333,6 +333,11 @@ input[type="text"]:focus {
   color: var(--text-mid-contrast);
 }
 
+#blog {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
 .icon {
   flex-shrink: 0;
 }
