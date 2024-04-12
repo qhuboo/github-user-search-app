@@ -154,30 +154,6 @@ nav .theme .icon svg path {
   fill: var(--text-mid-contrast);
 }
 
-nav .theme:hover {
-  cursor: pointer;
-}
-
-/* Light mode hover for theme name */
-nav .theme:hover .theme-name.sun {
-  color: #90a4d4;
-}
-
-/* Light mode hover for sun icon*/
-nav .theme:hover .icon.sun svg path {
-  fill: #90a4d4;
-}
-
-/* Dark mode hover for theme name*/
-nav .theme:hover .theme-name.moon {
-  color: var(--text-high-contrast);
-}
-
-/* Dark mode hover for moon icon */
-nav .theme:hover .icon.moon svg path {
-  fill: var(--text-high-contrast);
-}
-
 body:not(.dark) .sun {
   display: none;
 }
@@ -225,10 +201,6 @@ form button {
   font-family: "space mono bold";
 }
 
-form button:hover {
-  background-color: var(--primary-hover);
-}
-
 label {
   flex: 1;
   /* border: 2px solid darkblue; */
@@ -245,9 +217,6 @@ body.dark input[type="text"] {
   color: var(--text-high-contrast);
 }
 
-form:hover {
-  cursor: pointer;
-}
 input[type="text"]::placeholder {
   font-family: "space mono regular";
   font-size: 18px;
@@ -361,11 +330,6 @@ input[type="text"]:focus {
   font-family: "space mono regular";
   font-size: 15px;
   color: var(--text-mid-contrast);
-}
-
-.link:hover p {
-  text-decoration: underline;
-  cursor: pointer;
 }
 
 /* Added margin to align the location name with the other links since the icon name is the smallest icon */
@@ -515,5 +479,45 @@ input[type="text"]:focus {
 
   .link {
     font-size: 13px;
+  }
+}
+
+/* ****************** INTERACTION MEDIA QUERIES ******************* */
+@media (hover: hover) {
+  nav .theme:hover {
+    cursor: pointer;
+  }
+
+  /* Light mode hover for theme name */
+  nav .theme:hover .theme-name.sun {
+    color: #90a4d4;
+  }
+
+  /* Light mode hover for sun icon*/
+  nav .theme:hover .icon.sun svg path {
+    fill: #90a4d4;
+  }
+
+  /* Dark mode hover for theme name*/
+  nav .theme:hover .theme-name.moon {
+    color: var(--text-high-contrast);
+  }
+
+  /* Dark mode hover for moon icon */
+  nav .theme:hover .icon.moon svg path {
+    fill: var(--text-high-contrast);
+  }
+
+  form:hover {
+    cursor: pointer;
+  }
+
+  form button:hover {
+    background-color: var(--primary-hover);
+  }
+
+  .link:hover p {
+    text-decoration: underline;
+    cursor: pointer;
   }
 }
