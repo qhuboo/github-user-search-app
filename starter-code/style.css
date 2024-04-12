@@ -352,7 +352,7 @@ input[type="text"]:focus {
   margin-left: 150px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  row-gap: 15px;
+  gap: 16px;
 }
 
 .link {
